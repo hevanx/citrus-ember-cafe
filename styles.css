@@ -54,6 +54,92 @@
     --leading-relaxed: 1.625;
 }
 
+/* ----- Dark Mode Overrides ----- */
+[data-theme="dark"] {
+    --color-primary: #e67e22;
+    --color-primary-dark: #f39c12;
+    --color-primary-light: #d35400;
+    --color-secondary: #f5b041;
+    --color-dark: #e5e7eb;
+    --color-text: #d1d5db;
+    --color-text-muted: #9ca3af;
+    --color-light: #1e2530;
+    --color-lighter: #1a2029;
+    --color-white: #141a22;
+    --color-border: #2d3748;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+    --shadow-header: 0 1px 3px rgba(0, 0, 0, 0.3);
+    --shadow-header-scrolled: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+[data-theme="dark"] .page-header {
+    background: linear-gradient(135deg, #1a2029 0%, #242d3a 100%);
+}
+
+[data-theme="dark"] .cta-section {
+    background: linear-gradient(135deg, #1e2530 0%, #242d3a 100%);
+}
+
+[data-theme="dark"] .cta-section .btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border-color: var(--color-primary);
+}
+
+[data-theme="dark"] .cta-section .btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+}
+
+[data-theme="dark"] .form-group input:hover,
+[data-theme="dark"] .form-group select:hover,
+[data-theme="dark"] .form-group textarea:hover {
+    border-color: #4a5568;
+}
+
+[data-theme="dark"] .form-group input:focus,
+[data-theme="dark"] .form-group select:focus,
+[data-theme="dark"] .form-group textarea:focus {
+    box-shadow: 0 0 0 3px rgba(230, 126, 34, 0.2);
+}
+
+[data-theme="dark"] .form-success {
+    background-color: #1a332a;
+    color: #6ee7b7;
+}
+
+[data-theme="dark"] .form-success h3 {
+    color: #6ee7b7;
+}
+
+[data-theme="dark"] .quick-info {
+    background-color: #0f1318;
+}
+
+[data-theme="dark"] .site-footer {
+    background-color: #0f1318;
+}
+
+[data-theme="dark"] .copyright {
+    border-top-color: rgba(255, 255, 255, 0.06);
+}
+
+[data-theme="dark"] img {
+    opacity: 0.88;
+}
+
+[data-theme="dark"] .dark-mode-toggle .icon-moon {
+    display: none;
+}
+
+[data-theme="dark"] .dark-mode-toggle .icon-sun {
+    display: block !important;
+}
+
 /* ----- Reset & Base ----- */
 *,
 *::before,
@@ -76,6 +162,7 @@ body {
     background-color: var(--color-white);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color var(--transition-slow), color var(--transition-slow);
 }
 
 img {
